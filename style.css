@@ -26,3 +26,38 @@ body, html{
 header h1{
   text-align: center;
 }
+section{
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+} 
+article{
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+article .field{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+article .field input{
+  width: 70%;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.2rem;
+}
+button{
+  background-color: #0069D9;
+  color: white;
+
+  width: 100%;
+  border: none;
+  padding: 0.75rem 0.75rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
