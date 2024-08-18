@@ -116,6 +116,9 @@ button:hover {
   gap: 1rem;
   margin: 1rem;
 }
+li{
+  margin: 0 3.5rem;
+}
 .finalPrice {
   font-weight: 700;
   margin: 1rem;
