@@ -15,11 +15,12 @@ const formatter = new Intl.NumberFormat("pt-BR", {
 function calc() {
   output = document.getElementById("output");
   const quantities = document.getElementsByName("quantity");
+  const getName = document.getElementById("name");
   var finalPrice = document.getElementsByClassName("finalPrice")[0];
   output.innerHTML = "";
   var total = 0;
 
-  output.innerHTML += `Caro(a)</br>`;
+  output.innerHTML += `Caro(a) <strong>${getName.value}</strong></br>`;
   output.innerHTML += `Segue os dados do seu pedido:</br></br>`;
 
   output.innerHTML += `<ul id="orderList"></ul>`;
@@ -29,7 +30,11 @@ function calc() {
     const id = input.id;
 
     const listItem = document.createElement("li");
-    listItem.innerHTML = `Prato: ${products[id-1].name} - Preço: ${formatter.format(products[id-1].price)} - Quantidade: ${input.value}`;
+    listItem.innerHTML = `Prato: ${
+      products[id - 1].name
+    } - Preço: ${formatter.format(products[id - 1].price)} - Quantidade: ${
+      input.value
+    }`;
 
     orderList.appendChild(listItem);
     total += products[id - 1].price * parseFloat(input.value);
