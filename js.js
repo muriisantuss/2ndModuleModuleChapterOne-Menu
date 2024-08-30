@@ -29,6 +29,10 @@ function calc() {
   for (var input of quantities) {
     const id = input.id;
 
+    if(input.value == 0){
+      continue;
+    }
+
     const listItem = document.createElement("li");
     listItem.innerHTML = `Prato: ${
       products[id - 1].name
